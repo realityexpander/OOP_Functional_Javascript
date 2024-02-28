@@ -9,7 +9,7 @@ class Student {
 	#updateCounter = 0
 
 	/**
-	 * Creates a new instance of the Student2 class.
+	 * Creates a new instance of the Student class.
 	 * @constructs Student
 	 * @param {number[]} grades - The grades of the student.
 	 * @throws {Error} If `grades` is an empty array.
