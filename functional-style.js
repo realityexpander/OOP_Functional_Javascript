@@ -11,7 +11,6 @@ function Student(grades) {
 	// `_grades` is captured in this function body (closure) and is private.
 	//let _grades = grades  // Allows the original array to be modified.
 	let _grades = grades.slice()  // Prevents the original array from being modified by making a copy (slice).	
-
 	let _updateCounter = 0
 
 	return {
