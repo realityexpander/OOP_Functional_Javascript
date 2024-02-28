@@ -89,6 +89,7 @@ publicGrades[0] = 51
 console.log("2. Best grade=" + student.findBestGrade() +
 	", Update counter=" + student.fetchUpdateCounter())
 
+// student.incrementUpdateCounter()  // Error: student.incrementUpdateCounter is not a public method and will cause an error at runtime.
 
 // Output:
 // Best grade=3, Update counter=0
