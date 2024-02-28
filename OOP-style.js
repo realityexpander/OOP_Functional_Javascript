@@ -70,7 +70,8 @@ class Student {
 // Test the Student class.
 let publicGrades = [0, 1, 2, 3]
 let student = new Student(publicGrades)
-console.log("Best grade=" + student.findBestGrade())  // `grade` is 3.
+console.log("Best grade=" + student.findBestGrade() +
+	", Update counter=" + student.fetchUpdateCounter())
 console.log("Stringified JSON = " + JSON.stringify(student))
 
 // student.grades is private and cannot be accessed from the outside.
@@ -89,3 +90,9 @@ console.log("2. Best grade=" + student.findBestGrade() +
 	", Update counter=" + student.fetchUpdateCounter())
 
 
+// Output:
+// Best grade=3, Update counter=0
+// Stringified JSON = {}
+// student.grades = undefined
+// 1. Best grade=101, Update counter=1
+// 2. Best grade=101, Update counter=1

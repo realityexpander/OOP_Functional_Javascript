@@ -66,7 +66,8 @@ function Student(grades) {
 // Test the Student function.
 let publicGrades = [0, 1, 2, 3]
 let student = Student(publicGrades)
-console.log("Best grade=" + student.findBestGrade())  // `grade` is 3.
+console.log("Best grade=" + student.findBestGrade() +
+	", Update counter=" + student.fetchUpdateCounter())  // `grade` is 3, `updateCounter` is 0.
 console.log("Stringified JSON = " + JSON.stringify(student))
 
 // student.grades is private and cannot be accessed from the outside.
@@ -85,6 +86,12 @@ publicGrades[0] = 50
 console.log("2. Best grade=" + student.findBestGrade() +
 	", Update counter=" + student.fetchUpdateCounter())
 
+// Output:
+// Best grade=3, Update counter=0
+// Stringified JSON = {}
+// student.grades = undefined
+// 1. Best grade=100, Update counter=1
+// 2. Best grade=100, Update counter=1
 
 
 
