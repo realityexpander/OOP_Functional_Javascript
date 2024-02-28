@@ -14,7 +14,7 @@ function Student(grades) {
 
 	return {
 		/**
-		 * Fetch all grades.
+		 * Fetches all grades.
 		 * @method
 		 * @return {number[]} All the students grades
 		 */
@@ -26,7 +26,7 @@ function Student(grades) {
 		},
 
 		/**
-		 * Find the best grade.
+		 * Finds the best grade of the student.
 		 * @method
 		 * @return {number} The max grade in the array
 		 */
@@ -45,7 +45,7 @@ function Student(grades) {
 		},
 
 		/**
-		 * Fetch the update counter.
+		 * Fetches the update counter value.
 		 * @method
 		 * @return {number} The number of times the grades have been updated
 		 */

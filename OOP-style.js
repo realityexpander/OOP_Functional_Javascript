@@ -23,7 +23,7 @@ class Student {
 	}
 
 	/**
-	 * Gets the grades of the student.
+	 * Fetches all the grades of the student.
 	 * @returns {number[]} The grades of the student.
 	 */
 	fetchAllGrades() {
@@ -32,7 +32,7 @@ class Student {
 	}
 
 	/**
-	 * Gets the best grade of the student.
+	 * Finds the best grade of the student.
 	 * @returns {number} The best grade of the student.
 	 */
 	findBestGrade() {
