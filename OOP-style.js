@@ -3,7 +3,7 @@
  * @class
  * @constructs Student
  * @param {number[]} grades - The grades of the student.
- * @returns {Student2}
+ * @returns {Student} A new instance of the Student class.
  */
 class Student {
 	#grades
@@ -11,7 +11,7 @@ class Student {
 
 	/**
 	 * Creates a new instance of the Student2 class.
-	 * @constructs Student2
+	 * @constructs Student
 	 * @param {number[]} grades - The grades of the student.
 	 * @throws {Error} If `grades` is an empty array.
 	 */
@@ -69,7 +69,7 @@ class Student {
 
 // Test the Student class.
 let publicGrades = [0, 1, 2, 3]
-let student = new Student(publicGrades)
+let student = new Student(publicGrades)  // Note use of the `new` keyword.
 console.log("Best grade=" + student.findBestGrade() +
 	", Update counter=" + student.fetchUpdateCounter())
 console.log("Stringified JSON = " + JSON.stringify(student))

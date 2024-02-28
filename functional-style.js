@@ -3,7 +3,6 @@
  * @constructs Student
  * @param {number[]} grades - Array of integers representing student's grades
  * @throws {Error} If `grades` is an empty array.
- * @returns Student
  */
 function Student(grades) {
 	if (grades.length <= 0) throw new Error("Grades array must not be empty")
