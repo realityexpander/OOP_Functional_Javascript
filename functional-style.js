@@ -1,5 +1,5 @@
 /** 
- * Represents a student
+ * Represents a Student with grades.
  * @constructs Student
  * @param {number[]} grades - Array of integers representing student's grades
  * @throws {Error} If `grades` is an empty array.

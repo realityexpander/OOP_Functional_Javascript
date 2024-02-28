@@ -1,5 +1,5 @@
 /**
- * Represents a student with grades.
+ * Represents a Student with grades.
  * @class
  * @constructs Student
  * @param {number[]} grades - The grades of the student.
@@ -57,6 +57,10 @@ class Student {
 		return this.#updateCounter
 	}
 
+	/**
+	 * Increments the update counter.
+	 * @returns {void}
+	 */
 	#incrementUpdateCounter() {
 		this.#updateCounter++
 	}
