@@ -18,7 +18,7 @@ class Student {
 	constructor(grades) {
 		if (grades.length <= 0) throw new Error("Grades array must not be empty")
 
-		// this.#grades = grades
+		// this.#grades = grades  // Allows the original array to be modified externally.
 		this.#grades = grades.slice()  // Prevents the original array from being modified by making a copy (slice).
 	}
 
@@ -27,7 +27,8 @@ class Student {
 	 * @returns {number[]} The grades of the student.
 	 */
 	fetchAllGrades() {
-		return this.#grades.slice()
+		// return this.#grades  // Allows the original array to be modified externally.
+		return this.#grades.slice()  // Prevents the original array from being modified by making a copy (slice).
 	}
 
 	/**
@@ -68,22 +69,19 @@ let student = new Student(publicGrades)
 console.log("Best grade=" + student.findBestGrade())  // `grade` is 3.
 console.log("Stringified JSON = " + JSON.stringify(student))
 
+// student.grades is private and cannot be accessed from the outside.
+console.log("student.grades = " + student.grades)
 
 // "Send a message" to the object, ie: call a method.
-student.changeFirstGrade(100)
+student.changeFirstGrade(101)
 console.log("1. Best grade=" + student.findBestGrade() +
 	", Update counter=" + student.fetchUpdateCounter())
 
 
-// Attempt to change the grades array.
-publicGrades[0] = 50
+// Attempt to change the grades array... may work!
+publicGrades[0] = 5
 // Note value of `grade` depends on if the array was copied or not.
 console.log("2. Best grade=" + student.findBestGrade() +
 	", Update counter=" + student.fetchUpdateCounter())
 
-
-// Attempt to change the `grades` array using dot notation.
-Student.grades = [1000, 2000, 3000]
-console.log("3. Best grade=" + student.findBestGrade() +
-	", Update counter=" + student.fetchUpdateCounter())
 

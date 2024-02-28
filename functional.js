@@ -9,8 +9,9 @@ function Student(grades) {
 	if (grades.length <= 0) throw new Error("Grades array must not be empty")
 
 	// `_grades` is captured in this function body (closure) and is private.
-	// let _grades = grades  // Allows the original array to be modified.
-	let _grades = grades.slice()  // Prevents the original array from being modified by making a copy (slice).
+	let _grades = grades  // Allows the original array to be modified.
+	// let _grades = grades.slice()  // Prevents the original array from being modified by making a copy (slice).	
+
 	let _updateCounter = 0
 
 	return {
@@ -20,6 +21,9 @@ function Student(grades) {
 		 * @return {number[]} All the students grades
 		 */
 		fetchAllGrades: function () {
+			_accessCounter++
+
+			// return _grades  // Allows the original array to be modified.
 			return _grades.slice() // Prevents the original array from being modified by making a copy (slice).
 		},
 
@@ -65,22 +69,22 @@ let student = Student(publicGrades)
 console.log("Best grade=" + student.findBestGrade())  // `grade` is 3.
 console.log("Stringified JSON = " + JSON.stringify(student))
 
+// student.grades is private and cannot be accessed from the outside.
+console.log("student.grades = " + student.grades)
 
-// "Send a message" to the object, ie: call a method.
+
+// "Send a message" to the object, ie: call a public method.
 student.changeFirstGrade(100)
 console.log("1. Best grade=" + student.findBestGrade() +
 	", Update counter=" + student.fetchUpdateCounter())
 
 
-// Attempt to change the grades array.
+// Attempt to change the student `grades` array externally.
 publicGrades[0] = 50
 // Note value of `grade` depends on if the array was copied or not.
 console.log("2. Best grade=" + student.findBestGrade() +
 	", Update counter=" + student.fetchUpdateCounter())
 
 
-// Attempt to change the `grades` array using dot notation.
-Student.grades = [1000, 2000, 3000]
-console.log("3. Best grade=" + student.findBestGrade() +
-	", Update counter=" + student.fetchUpdateCounter())
+
 
