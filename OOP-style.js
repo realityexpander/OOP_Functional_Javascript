@@ -1,6 +1,5 @@
 /**
  * Represents a Student with grades.
- * @class
  * @constructs Student
  * @param {number[]} grades - The grades of the student.
  * @returns {Student} A new instance of the Student class.
