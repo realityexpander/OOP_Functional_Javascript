@@ -83,7 +83,7 @@ console.log("1. Best grade=" + student.findBestGrade() +
 
 
 // Attempt to change the grades array... may work!
-publicGrades[0] = 5
+publicGrades[0] = 51
 // Note value of `grade` depends on if the array was copied or not.
 console.log("2. Best grade=" + student.findBestGrade() +
 	", Update counter=" + student.fetchUpdateCounter())
