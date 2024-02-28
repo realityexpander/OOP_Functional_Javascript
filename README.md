@@ -8,3 +8,6 @@ https://www.youtube.com/watch?v=STtOP6d7K_4
 https://douglasbellonrocha.medium.com/functional-object-oriented-programming-with-message-passing-71979ca9d097
 
 https://jsdoc.app/
+
+My course on Programming from the Ground Up
+https://www.youtube.com/playlist?list=PLzUxWOrVXB4QHsURai1GmmhmqAUVNbfno
