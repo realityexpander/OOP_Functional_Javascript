@@ -67,7 +67,7 @@ class Student {
 }
 
 
-// Test the Student function.
+// Test the Student class.
 let publicGrades = [0, 1, 2, 3]
 let student = new Student(publicGrades)
 console.log("Best grade=" + student.findBestGrade())  // `grade` is 3.
