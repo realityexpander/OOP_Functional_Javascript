@@ -1,9 +1,10 @@
+# Discuss difference between FP and OOP style in Javascript
+
 YouTube Explainer:
 
 [<img src="https://github.com/realityexpander/OOP_Functional_Javascript/assets/5157474/4d561aab-edb3-4624-b47e-f8d0a7d3ce6f" width="300">](https://youtu.be/WoQL_GeVMUk)
 
-Discuss difference between FP and OOP style in Javascript
-
+## Inspiration:
 Functional OOP????? | Prime Reacts
 https://www.youtube.com/watch?v=STtOP6d7K_4
 
